@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>PEDRO A. S.</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e8c0009f9e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="contend-btn-menu">
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><i class="fas fa-chevron-right"></i></label>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li id="controls"><i class="fas fa-music play" id="music" ></i><i class="fas fa-moon" id="dark-mode"></i></li>
+            <li><a href="#s-1">Portada</a></li>
+            <li><a href="#s-2">Proyectos</a></li>
+            <li><a href="#s-3">Biografia</a></li>
+        </ul>
+    </nav>
+    <section id="s-1">
+        <audio src="Maya_Filipi__-_In_Your_Eyes.mp3" autoplay="autoplay" loop="true" volumen="50" id="b-sound"></audio>
+        <h1 id="nombre">Pedro Aquino Sáenz</h1>
+        <p>Estudiante de Ingenieria de Sistemas Computacionales</p>
+        <img id="img-portada" src="fondo para portafolio.jpg" alt="imagen portada">
+        <a href="#s-2" id="btn-proyectos"><i class="fas fa-chevron-down"></i></a>
+    </section>
+    <section id="s-2">
+        <h2 class="section-title">Proyectos</h2>
+        <div class="container">
+            <div class="card">
+                <div class="card-image">
+                </div>
+                <div class="card-text">
+                  <h2>Mapa Covid19</h2>
+                  <p></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                </div>
+                <div class="card-text">
+                  <h2>Sistema de ventas</h2>
+                  <p>Sistema para gestion de ventas de una bodega con base de datos en archivos </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                </div>
+                <div class="card-text">
+                  <h2>Sistema de ventas</h2>
+                  <p></p>
+                </div>
+            </div>
+        </div>
+        <a href="#s-1" id="btn-up"><i class="fas fa-chevron-up"></i></a>
+        <a href="#s-3" id="btn-down"><i class="fas fa-chevron-down"></i></a>
+    </section>
+    <section id="s-3">
+        <h2 class="section-title">Biografia</h2>
+        <div class="container">
+            <div class="footer">
+                <p><i class="fas fa-copyright"></i> Copyright - 2021</p>
+            </div>
+        </div>
+        <a href="#s-2" id="btn-up"><i class="fas fa-chevron-up"></i></a>
+    </section>
+    
+    <script src="app.js"></script>
+</body>
+</html>

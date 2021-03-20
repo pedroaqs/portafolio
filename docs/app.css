@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    font-family: 'Gruppo', cursive;
+    font-weight: bold;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow: hidden;
+}
+
+#contend-btn-menu{
+    position: fixed;
+    z-index: 9999;
+    top: 44%;
+    font-size: 30px;
+    background-color: #ffffff00;
+}
+#contend-btn-menu label{
+    background-color:#ffffff00 ;
+}
+#controls{
+    display: flex;
+    justify-content: space-around;
+    color: #616161;
+}
+#controls i{
+ margin:0 20px ;
+}
+.play{
+    color: #000000;
+}
+
+nav{
+    width: 20%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+}
+.nav-links{
+    width: 100%;
+    position: absolute;
+    justify-content: space-around;
+    left: 0;
+    height: 40vh;
+    top: 26vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff00;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in;
+}
+.nav-active{
+    transform: translateX(0%);
+}
+.nav-links a{
+    color: #000000;
+    background-color: #ffffff00;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+.nav-links li {
+    list-style: none;
+    opacity: 0;
+    background-color: #ffffff00;
+}
+
+#btn-menu{
+    display: none;
+    background-color: #ffffff00;
+}
+#btn-proyectos{
+    position: absolute;
+    z-index: 999;
+    color: #000000;
+    background-color: #ffffff00;
+    font-size: 30px;
+    top:95%;
+    left: 50%;
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#nombre{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    font-family: 'Rock Salt', cursive;
+    font-size: 300%;
+    transition: all 1s ease;
+}
+#nombre:hover{
+    font-size: 320%;
+    
+}
+section p{
+    position: absolute;
+    font-family: 'Gruppo', cursive;
+    font-weight: bold;
+    top: 45%;
+    left: 25%;
+    font-size: 140%;
+}
+#img-portada{
+    position: absolute;
+    height: 100%;
+    left: 70%;
+}
+
+.section-title{
+    margin: 24px;
+    font-family: 'Rock Salt', cursive;
+    letter-spacing: 4px;
+}
+#btn-up{
+    position: absolute;
+    color: #000000;
+    background-color: #ffffff00;
+    font-size: 30px;
+    top:90%;
+    left:95%;
+    transition: 0.9s ease;
+}
+#btn-down{
+    position: absolute;
+    color: #000000;
+    background-color: #ffffff00;
+    font-size: 30px;
+    top:95%;
+    left: 95%;
+    transition: 0.9s ease;
+}
+
+.container{
+    width: 90vw;
+    height: 80vh;
+    background-color: #00000000;
+    margin: 1vh 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+.card{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 250px 200px;
+    grid-template-areas: "image" "text";
+    border-radius: 18px;
+    box-shadow:5px 5px 15px #000000b0;
+    overflow: hidden;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+}
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px #00000099;
+}
+.card:hover .card-image{
+    filter: none;
+}
+.card-image{
+    background:url("Sistema\ de\ ventas.jpg");
+    background-size: cover;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+}
+.card-image:hover{
+    filter: none;
+}
+.card-text {
+    grid-area: text;
+    margin: 25px;
+}
+.card-text p {
+    color: grey;
+    font-size:15px;
+    top: 0;
+    left: 0;
+    font-weight: 300;
+    position: relative;
+    margin-top: 20px;
+}
+.card-text h2 {
+    margin-top:0px;
+    font-size:28px;
+}
+.footer{
+    position: relative;
+    width: 50%;
+    height: 6vh;
+    top: 95%;
+    text-align: center;
+    z-index: 99999;
+    background-color: #ffffff00;
+}
+.footer p ,i{
+    background-color:#ffffff00 ;
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes btnMenuOpen{
+    from{
+        transform: translateX(0px) rotate(0deg);
+    }
+    to{
+        transform: translateX(20vw) rotate(180deg) ;
+    }
+}
+@keyframes btnMenuClose{
+    from{
+        transform: translateX(20vw) rotate(180deg);
+    }
+    to{
+        transform: translateX(0px) rotate(0deg) ;
+    }
+}
+
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+.dark-mode a{
+    color: #FFFFFF;
+    background-color: #00000000;
+}
+.dark-mode #img-portada {
+    filter: invert(100%);
+}
+.dark-mode .play{
+    color: #FFFFFF;
+}
+.dark-mode .card{
+    box-shadow:5px 5px 15px #ffffff79;
+}
+.dark-mode #controls{
+    color: #a8a8a8;
+}
